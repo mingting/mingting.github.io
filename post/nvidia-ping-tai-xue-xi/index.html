@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Nvidia平台学习 | Mingting</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mingting.github.io/favicon.ico?v=1660018012734">
+<link rel="stylesheet" href="https://mingting.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="下图是官网的截图，将按照如下图的分类，进行学习。
+
+CUDA-X AI
+TensorRT
+NVIDIA® TensorRT™ is an SDK for high-performance deep learning inference. I..." />
+    <meta name="keywords" content="工作" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mingting.github.io">
+        <img src="https://mingting.github.io/images/avatar.png?v=1660018012734" class="site-logo">
+        <h1 class="site-title">Mingting</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mingting.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Nvidia平台学习</h2>
+            <div class="post-date">2021-08-16</div>
+            
+            <div class="post-content" v-pre>
+              <p>下图是官网的截图，将按照如下图的分类，进行学习。<br>
+<img src="https://mingting.github.io/post-images/1629083760763.png" alt="" loading="lazy"></p>
+<h1 id="cuda-x-ai">CUDA-X AI</h1>
+<h2 id="tensorrt">TensorRT</h2>
+<p>NVIDIA® TensorRT™ is an SDK for high-performance deep learning inference. It includes a deep learning inference optimizer and runtime that delivers low latency and high throughput for deep learning inference applications.</p>
+<p>TensorRT-based applications perform up to 40X faster than CPU-only platforms during inference. With TensorRT, you can optimize neural network models trained in all major frameworks, calibrate for lower precision with high accuracy, and deploy to hyperscale data centers, embedded, or automotive product platforms.</p>
+<p><strong>TensorRT is built on CUDA®</strong>, NVIDIA’s parallel programming model, and enables you to optimize inference leveraging libraries, development tools, and technologies in CUDA-X™ for artificial intelligence, autonomous machines, high-performance computing, and graphics. With new NVIDIA Ampere Architecture GPUs, TensorRT also leverages sparse tensor cores providing an additional performance boost.</p>
+<p>TensorRT provides INT8 and FP16 optimizations for production deployments of deep learning inference applications such as video streaming, speech recognition, recommendation, fraud detection, and natural language processing. Reduced precision inference significantly reduces application latency, which is a requirement for many real-time services, as well as autonomous and embedded applications.</p>
+<p>With TensorRT, developers can focus on creating novel AI-powered applications rather than performance tuning for inference deployment.</p>
+<h2 id="triton-inference-server">Triton Inference Server</h2>
+<p>NVIDIA Triton™ Inference Server simplifies the deployment of AI models at scale in production. Open-source inference serving software, it lets teams deploy trained AI models from any framework (TensorFlow, NVIDIA® TensorRT®, PyTorch, ONNX Runtime, or custom) from local storage or cloud platform on any GPU- or CPU-based infrastructure (cloud, data center, or edge).</p>
+<h2 id="nemo">NeMo</h2>
+<p>NVIDIA NeMo™ is an open-source toolkit for researchers developing state-of-the-art conversational AI models.</p>
+<p>Building state-of-the-art conversational AI models requires researchers to quickly experiment with novel network architectures. This means going through the complex and time-consuming process of modifying multiple networks and verifying compatibility across inputs, outputs, and data pre-processing layers.</p>
+<p>NVIDIA NeMo is a Python toolkit for building, training, and fine-tuning GPU-accelerated conversational AI models using a simple interface. Using NeMo, researchers can build state-of-the-art conversational AI models using easy-to-use application programming interfaces (APIs). NeMo runs mixed precision compute using <a href="https://developer.nvidia.com/tensor-cores">Tensor Cores</a> in NVIDIA GPUs and can scale up to multiple GPUs easily to deliver the highest training performance possible.</p>
+<p>NeMo is used to build models for real-time automated speech recognition (ASR), natural language processing (NLP), and text-to-speech (TTS) applications such as video call transcriptions, intelligent video assistants, and automated call center support across healthcare, finance, retail, and telecommunications.</p>
+<h2 id="cudnn">cuDNN</h2>
+<p>The NVIDIA CUDA® Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for <a href="https://developer.nvidia.com/deep-learning">deep neural networks</a>. cuDNN provides highly tuned implementations for standard routines such as forward and backward convolution, pooling, normalization, and activation layers.</p>
+<p>Deep learning researchers and framework developers worldwide rely on cuDNN for high-performance GPU acceleration. It allows them to focus on training neural networks and developing software applications rather than spending time on low-level GPU performance tuning. cuDNN accelerates widely used deep learning frameworks, including <a href="https://caffe2.ai/">Caffe2</a>, <a href="https://chainer.org/">Chainer</a>, <a href="https://keras.io/">Keras</a>, <a href="https://www.mathworks.com/solutions/deep-learning.html">MATLAB</a>, <a href="https://mxnet.incubator.apache.org/">MxNet</a>, <a href="https://github.com/PaddlePaddle/Paddle">PaddlePaddle</a>, <a href="https://pytorch.org/">PyTorch</a>, and <a href="https://www.tensorflow.org/">TensorFlow</a>. For access to NVIDIA optimized deep learning framework <a href="https://developer.nvidia.com/ai-hpc-containers">containers</a> that have cuDNN integrated into frameworks, visit <a href="https://www.nvidia.com/en-us/gpu-cloud/">NVIDIA GPU CLOUD</a> to learn more and get started.</p>
+<h2 id="nccl">NCCL</h2>
+<p>The NVIDIA Collective Communication Library (NCCL) implements multi-GPU and multi-node communication primitives optimized for NVIDIA GPUs and Networking. NCCL provides routines such as all-gather, all-reduce, broadcast, reduce, reduce-scatter as well as point-to-point send and receive that are optimized to achieve high bandwidth and low latency over PCIe and NVLink high-speed interconnects within a node and over NVIDIA Mellanox Network across nodes.</p>
+<p>Leading deep learning frameworks such as <a href="https://www.caffe2.ai/">Caffe2</a>, <a href="https://chainer.org/">Chainer</a>, <a href="https://mxnet.incubator.apache.org/">MxNet</a>, <a href="http://pytorch.org/">PyTorch</a> and <a href="https://www.tensorflow.org/">TensorFlow</a> have integrated NCCL to accelerate deep learning training on multi-GPU multi-node systems.</p>
+<p>NCCL is available for download as part of the <a href="https://developer.nvidia.com/hpc-sdk">NVIDIA HPC SDK</a> and as a separate package for Ubuntu and Red Hat.</p>
+<h2 id="dali">DALI</h2>
+<p>The NVIDIA Data Loading Library (DALI) is a portable, open source library for decoding and augmenting images,videos and speech to accelerate deep learning applications. DALI reduces latency and training time, mitigating bottlenecks, by overlapping training and pre-processing. It provides a drop-in replacement for built in data loaders and data iterators in popular deep learning frameworks for easy integration or retargeting to different frameworks.</p>
+<p>Training neural networks with images requires developers to first normalize those images. Moreover images are often compressed to save on storage. Developers have therefore built multi-stage data processing pipelines that include loading, decoding, cropping, resizing, and many other augmentation operators. These data processing pipelines, which are currently executed on the CPU, have become a bottleneck, limiting overall throughput.</p>
+<p>DALI is a high performance alternative to built-in data loaders and data iterators. Developers can now run their data processing pipelines on the GPU, reducing the total time it takes to train a neural network. Data processing pipelines implemented using DALI are portable because they can easily be retargeted to TensorFlow, PyTorch and MXNet.</p>
+<h2 id="cublas">cuBLAS</h2>
+<p>The cuBLAS Library provides a GPU-accelerated implementation of the basic linear algebra subroutines (BLAS). cuBLAS accelerates AI and HPC applications with drop-in industry standard BLAS APIs highly optimized for NVIDIA GPUs. The cuBLAS library contains extensions for batched operations, execution across multiple GPUs, and mixed and low precision execution. Using cuBLAS, applications automatically benefit from regular performance improvements and new GPU architectures. The cuBLAS library is included in both the <a href="https://developer.nvidia.com/hpc-sdk">NVIDIA HPC SDK</a> and the <a href="https://developer.nvidia.com/cuda-downloads">CUDA Toolkit</a>.</p>
+<h2 id="cusparse">cuSPARSE</h2>
+<p>The cuSPARSE library provides GPU-accelerated basic linear algebra subroutines for sparse matrices that perform significantly faster than CPU-only alternatives. It provides functionality that can be used to build GPU accelerated solvers. cuSPARSE is widely used by engineers and scientists working on applications such as machine learning, computational fluid dynamics, seismic exploration and computational sciences. Using cuSPARSE, applications automatically benefit from regular performance improvements and new GPU architectures. The cuSPARSE library is included in both the <a href="https://developer.nvidia.com/hpc-sdk">NVIDIA HPC SDK</a> and the <a href="https://developer.nvidia.com/cuda-downloads">CUDA Toolkit</a>.</p>
+<h2 id="optical-flow-sdk">Optical Flow SDK</h2>
+<p>Optical Flow SDK exposes the latest hardware capability of Turing and Ampere GPUs dedicated to computing the relative motion of pixels between images. The hardware uses sophisticated algorithms to yield highly accurate flow vectors, which are robust to frame-to-frame intensity variations, and track the true object motion.</p>
+<h1 id="doca">DOCA</h1>
+<h2 id="doca-2">DOCA</h2>
+<p>Data Center Infrastructure-on-a-Chip Architecture</p>
+<p>The NVIDIA® DOCA™ SDK (software development kit) enables developers to rapidly create applications and services on top of NVIDIA BlueField® data processing units (DPUs), leveraging industry-standard APIs.</p>
+<p>With DOCA, program the data center infrastructure of tomorrow by creating high-performance, software-defined, cloud-native, DPU-accelerated services to address the increasing performance and security demands of modern data centers.</p>
+<h1 id="clara">CLARA</h1>
+<h2 id="clara-guardian">Clara Guardian</h2>
+<p>NVIDIA Clara™ Guardian is an application framework and partner ecosystem that simplifies the development and deployment of smart sensors with multimodal AI, anywhere in a healthcare facility. With a diverse set of pre-trained models, reference applications, and fleet management solutions, developers can build solutions faster—bringing AI to healthcare facilities and improving patient care.</p>
+<h2 id="clara-imaging">Clara Imaging</h2>
+<p>Today, GPUs are found in almost all imaging modalities, including CT, MRI, x-ray, and ultrasound - bringing compute capabilities to the edge devices. With the boom of deep learning research in medical imaging, more efficient and improved approaches are being developed to enable AI-assisted workflows.</p>
+<p>To develop these AI capable applications, the data needs to be made AI-ready. NVIDIA Clara’s AI-Assisted Annotation does so by providing APIs and a toolkit to bring AI-assisted annotation capabilities to any medical viewer. Post annotation, data scientists and researchers need to build a robust AI model. To enable this, NVIDIA Clara Train includes techniques like AutoML, privacy-preserving federated learning and Transfer Learning. One trained AI model is available in Clara Deploy and provides a reference framework to take an AI model and write an application workflow around it to enable interfacing in a hospital like environment. Clara Deploy includes platform capabilities required to support multi-AI, multi-domain workflows in a seamless manner.</p>
+<h2 id="clara-parabricks">Clara Parabricks</h2>
+<p>NVIDIA Clara™ Parabricks is a computational framework supporting genomics applications from DNA to RNA. It employs NVIDIA’s CUDA, HPC, AI, and data analytics stacks to build GPU accelerated libraries, pipelines, and reference application workflows for primary, secondary, and tertiary analysis. Clara Parabricks is a complete portfolio of off-the-shelf solutions coupled with a toolkit to support new application development to address the needs of genomic labs.</p>
+<h1 id="hpc">HPC</h1>
+<h2 id="hpc-sdk">HPC SDK</h2>
+<p>A Comprehensive Suite of Compilers, Libraries and Tools for HPC</p>
+<p>The NVIDIA HPC Software Development Kit (SDK) includes the proven compilers, libraries and software tools essential to maximizing developer productivity and the performance and portability of HPC applications.</p>
+<p>The NVIDIA HPC SDK C, C++, and Fortran compilers support GPU acceleration of HPC modeling and simulation applications with standard C++ and Fortran, OpenACC® directives, and CUDA®. GPU-accelerated math libraries maximize performance on common HPC algorithms, and optimized communications libraries enable standards-based multi-GPU and scalable systems programming. Performance profiling and debugging tools simplify porting and optimization of HPC applications, and containerization tools enable easy deployment on-premises or in the cloud. With support for NVIDIA GPUs and Arm, OpenPOWER, or x86-64 CPUs running Linux, the HPC SDK provides the tools you need to build NVIDIA GPU-accelerated HPC applications.</p>
+<h2 id="cuda-toolkit">CUDA Toolkit</h2>
+<p>The NVIDIA® CUDA® Toolkit provides a development environment for creating high performance GPU-accelerated applications. With the CUDA Toolkit, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms and HPC supercomputers. The toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler, and a runtime library to build and deploy your application on major architectures including x86, Arm and POWER.</p>
+<p>Using built-in capabilities for distributing computations across multi-GPU configurations, scientists and researchers can develop applications that scale from single GPU workstations to cloud installations with thousands of GPUs.</p>
+<h2 id="openacc">OpenACC</h2>
+<h3 id="openacc-directives">OpenACC Directives</h3>
+<p>Accelerated computing is fueling some of the most exciting scientific discoveries today. For scientists and researchers seeking faster application performance, OpenACC is a directive-based programming model designed to provide a <strong>simple</strong> yet powerful approach to accelerators without significant programming effort. With OpenACC, a single version of the source code will deliver <strong>performance portability</strong> across the platforms.</p>
+<h2 id="index">IndeX</h2>
+<p>NVIDIA IndeX is a 3D volumetric interactive visualization SDK that allows scientists and researchers to visualize and interact with massive data sets, make real-time modifications, and navigate to the most pertinent parts of the data, all in real-time, to gather better insights faster. IndeX leverages GPU clusters for scalable, real-time, visualization and computing of multi-valued volumetric data together with embedded geometry data.</p>
+<h2 id="cuda-x-libraries">CUDA-X Libraries</h2>
+<p>NVIDIA® CUDA-X, built on top of NVIDIA CUDA®, is a collection of libraries, tools, and technologies that deliver dramatically higher performance—compared to CPU-only alternatives— across multiple application domains, from artificial intelligence (AI) to high performance computing (HPC).</p>
+<p>NVIDIA libraries run everywhere from resource-constrained IoT devices, to self-driving cars, to the largest supercomputers on the planet. As a result, you get highly-optimized implementations of an ever-expanding set of algorithms. Whether you’re building a new application or accelerating an existing application, NVIDIA libraries provide the easiest way to get started with GPU acceleration.</p>
+<h2 id="developer-tools">Developer Tools</h2>
+<p>NVIDIA Developer Tools are a collection of applications, spanning desktop and mobile targets, which enable developers to build, debug, profile, and develop class-leading and cutting-edge software that utilizes the latest visual computing hardware from NVIDIA.</p>
+<h2 id="simnet">SimNet</h2>
+<p>AI-Accelerated Simulation Toolkit</p>
+<p>Simulations are pervasive in science and engineering. They are computationally expensive and don't easily accommodate measured data coming from sources such as sensors or cameras. <strong>NVIDIA SimNet™</strong> is a physics-informed neural network (PINNs) toolkit, which addresses these challenges using AI and physics. Whether you're looking to get started with AI-driven physics simulations or working on complex nonlinear physics problems, NVIDIA SimNet is your toolkit for solving forward, inverse, or data assimilation problems.</p>
+<h1 id="drive">DRIVE</h1>
+<h2 id="drive-agx">DRIVE AGX</h2>
+<p>The NVIDIA DRIVE® AGX Developer Kit provides the hardware, software, and sample applications needed for the development of production level autonomous vehicles (AV). The NVIDIA DRIVE AGX System is built on production auto-grade silicon, features an open software framework, and has a large ecosystem of automotive partners (including auto grade sensor vendors, automotive Tier 1 suppliers) to choose from.</p>
+<h2 id="drive-hyperion">DRIVE Hyperion</h2>
+<p>NVIDIA DRIVE Hyperion™ is a reference architecture for NVIDIA’s Level 2+ autonomy solution consisting of a complete sensor suite and AI computing platform, along with the full software stack for autonomous driving, driver monitoring, and visualization. The DRIVE Hyperion Developer kit can be integrated into a test vehicle, enabling AV developers to develop, evaluate, and validate AV technology. Software is updated to DRIVE Hyperion using the NVIDIA DRIVE OTA over-the-air update infrastructure and services.</p>
+<h2 id="drive-sim">DRIVE Sim</h2>
+<p>NVIDIA DRIVE Sim™ is an end-to-end simulation platform, architected from the ground up to run large-scale, physically accurate multi-sensor simulation. It's open, scalable, modular and supports AV development and validation from concept to deployment, improving developer productivity and accelerating time to market.</p>
+<h2 id="drive-constellation">DRIVE Constellation</h2>
+<p>NVIDIA DRIVE Constellation™ is a dedicated data center platform for AV hardware-in-the-loop (HIL) simulation at scale. It runs <a href="https://developer.nvidia.com/drive/drive-sim">NVIDIA DRIVE Sim™</a> for the core simulation engine and tests on the same AV hardware used in the vehicle to support bit- and timing-accurate AV validation.</p>
+<p>DRIVE Constellation is comprised of two side-by-side servers:</p>
+<p>The first server — DRIVE Constellation Simulator — uses NVIDIA GPUs running DRIVE Sim software to simulate the virtual world. The simulator generates the sensor output from the virtual car driving in a virtual world.</p>
+<p>The second server — DRIVE Constellation Vehicle — contains the autonomous vehicle target computer that processes the simulated sensor data and feeds driving decisions back to the DRIVE Constellation Simulator.</p>
+<h1 id="isaac">ISAAC</h1>
+<h2 id="isaac-sdk">Isaac SDK</h2>
+<p>Build and deploy <strong>commercial-grade, AI-powered</strong> robots. The NVIDIA Isaac SDK™ is a toolkit that includes building blocks and tools that accelerate robot developments that require the increased perception and navigation features enabled by AI.</p>
+<h2 id="isaac-sim">Isaac Sim</h2>
+<p>NVIDIA Isaac Sim, powered by Omniverse, is a scalable robotics simulation application and synthetic data generation tool that powers photorealistic, physically-accurate virtual environments to develop, test, and manage AI-based robots.</p>
+<h2 id="jetson-developer-kits">Jetson Developer Kits</h2>
+<p>NVIDIA® Jetson™ brings accelerated AI performance to the Edge in a power-efficient and compact form factor. Together with <a href="https://developer.nvidia.com/embedded/develop/software">NVIDIA JetPack™ SDK</a>, these Jetson modules open the door for you to develop and deploy innovative products across all industries.</p>
+<h2 id="jetpack">Jetpack</h2>
+<p>NVIDIA JetPack SDK is the most comprehensive solution for building end-to-end accelerated AI applications. All Jetson modules and developer kits are supported by JetPack SDK.</p>
+<p>JetPack SDK includes the Jetson Linux Driver Package (L4T) with Linux operating system and CUDA-X accelerated libraries and APIs for Deep Learning, Computer Vision, Accelerated Computing and Multimedia. It also includes samples, documentation, and developer tools for both host computer and developer kit, and supports higher level SDKs such as DeepStream for streaming video analytics and Isaac for robotics.</p>
+<h1 id="rtx">RTX</h1>
+<h2 id="optix-sdk">OPtiX SDK</h2>
+<p>NVIDIA OPTIX™ RAY TRACING ENGINE</p>
+<p>An application framework for achieving optimal ray tracing performance on the GPU. It provides a simple, recursive, and flexible pipeline for accelerating ray tracing algorithms. Bring the power of NVIDIA GPUs to your ray tracing applications with programmable intersection, ray generation, and shading.</p>
+<h2 id="directxdxr">DirectX[DXR]</h2>
+<p>DIRECTX 12 ULTIMATE</p>
+<p>DirectX 12 Ultimate is Microsoft’s latest graphics API, which codifies NVIDIA RTX’s innovative technologies first introduced in 2018, as the cross-platform standard for next-generation, real-time graphics. It offers APIs for Ray Tracing, Variable Rate Shading, Mesh Shading, Sampler Feedback, and more, enabling developers to implement cinema-quality reflections, shadows, and lighting in games and real-time applications. With the <a href="https://devblogs.microsoft.com/directx/announcing-dx12agility/">DirectX 12 Agility SDK</a>, developers can get the latest ray tracing technologies and graphics API’s immediately on any Windows 10 version November 2019 and newer.</p>
+<h2 id="vkray">VKRay</h2>
+<h2 id="real-time-denoisers">Real-time Denoisers</h2>
+<p>The NVIDIA Real-Time Denoisers (NRD) are a spatio-temporal API agnostic denoising library that’s designed to work with low ray per pixel signals. It uses input signals and environmental conditions to deliver results comparable to ground truth images.</p>
+<h2 id="rtxgi">RTXGI</h2>
+<p>RTX Global Illumination (RTXGI)</p>
+<p>Leveraging the power of ray tracing, the RTX Global Illumination SDK provides scalable solutions to compute multi-bounce indirect lighting without bake times, light leaks, or expensive per-frame costs. RTXGI is supported on any DXR-enabled GPU, and is an ideal starting point to bring the benefits of ray tracing to your existing tools, knowledge, and capabilities.</p>
+<h2 id="rtxdi">RTXDI</h2>
+<p>RTX Direct Illumination (RTXDI)</p>
+<p>Imagine adding millions of dynamic lights to your game environments without worrying about performance or resource constraints. RTXDI makes this possible while rendering in real time.</p>
+<p>Geometry of any shape can now emit light and cast appropriate shadows: Tiny LEDs. Times Square billboards. Even exploding fireballs. RTXDI easily incorporates lighting from user-generated models. And all of these lights can move freely and dynamically.</p>
+<h2 id="dlss">DLSS</h2>
+<p>NVIDIA DLSS is a new and improved deep learning neural network that boosts frame rates and generates beautiful, sharp images for your games. It gives you the performance headroom to maximize ray tracing settings and increase output resolution. DLSS is powered by dedicated AI processors on RTX GPUs called Tensor Cores.</p>
+<h2 id="mdl-sdk">MDL SDK</h2>
+<p>Enables quick integration of physically-based materials into rendering applications</p>
+<p>The NVIDIA MDL SDK is a set of tools to integrate MDL support into rendering applications. It contains components for loading, inspecting, editing of material definitions as well as compiling MDL functions to GLSL, HLSL, Native x86, PTX and LLVM-IR. With the NVIDIA MDL SDK, any physically based renderer can easily add support for MDL and join the MDL eco-system.</p>
+<p>The <a href="http://www.nvidia.com/object/material-definition-language.html">NVIDIA Material Definition Language (MDL)</a> is a programming language for defining physically based materials for rendering. A rich vocabulary of material building blocks based on bidirectional scattering distribution functions (bsdf) allows creation of a wide range of physical materials such as woods, fabrics, translucent plastics and more. The language is flexible enough to allow applications to add support for popular material models without additional changes in a renderers core shading code, examples would be the Epic’s Unreal physical material model or the material model used for in X-Rite’s SVBRDF model. MDL is defined in a way that it's abstract enough to allow renderers of various architectures to support it. A C-like language for defining texturing functions allows the implementation of custom texturing workflows, texture projections and procedural textures.</p>
+<h2 id="physx">PhysX</h2>
+<p>NVIDIA PhysX is a scalable multi-platform physics simulation solution supporting a wide range of devices, from smartphones to high-end multicore CPUs and GPUs.</p>
+<p>The powerful SDK brings high-performance and precision accuracy to industrial simulation use cases from traditional <a href="https://developer.nvidia.com/gameworks-visualfx-overview">VFX</a> and <a href="https://developer.nvidia.com/industries/gamedev">game development</a> workflows, to <a href="https://developer.nvidia.com/isaac-sim">highm-fidelity robotics</a>, <a href="https://developer.nvidia.com/clara-medical-imaging">medical simulation</a>, and <a href="https://www.nvidia.com/en-us/omniverse/scientific-visualization/">scientific visualization applications</a>.</p>
+<h2 id="flex">Flex</h2>
+<p>FleX is a particle based simulation technique for real-time visual effects.Traditionally, visual effects are made using a combination of elements created using specialized solvers for rigid bodies, fluids, clothing, etc. Because FleX uses a unified particle representation for all object types, it enables new effects where different simulated substances can interact with each other seamlessly. Such unified physics solvers are a staple of the offline computer graphics world, where tools such as Autodesk Maya's nCloth, and Softimage's Lagoa are widely used. The goal for FleX is to use the power of GPUs to bring the capabilities of these offline applications to real-time computer graphics.</p>
+<h2 id="vmaterials">vMaterials</h2>
+<p>NVIDIA vMaterials are a curated collection of MDL materials and lights representing common real world materials used in design and AEC workflows. Integrating the Iray or MDL SDK quickly brings a library of hundreds of ready to use materials to your application without writing shaders. The materials are built with a consistent scale so designers can easily switch from material to material without needing to re-adjust scale. The layering capabilities of MDL make quick work of changing or enhancing the materials to get just the look that’s needed. Since vMaterials are built on MDL, they can easily be saved and opened in other supporting applications. NVIDIA vMaterials make it easy to provide your customers a wide range of materials quickly and easily.</p>
+<h2 id="reflex">Reflex</h2>
+<p>The NVIDIA Reflex SDK allows game developers to implement a low latency mode that aligns game engine work to complete just-in-time for rendering, eliminating the GPU render queue and reducing CPU back pressure in GPU-bound scenarios. As a developer, System Latency (click-to-display) can be one of the hardest metrics to optimize for. In addition to latency reduction functions, the SDK also features measurement markers to calculate both Game and Render Latency - great for debugging and visualizing in-game performance counters.</p>
+<h2 id="unreal-engine-4-branch">Unreal Engine 4 Branch</h2>
+<p>World’s most open and advanced real-time 3D creation platform. Continuously evolving to serve not only its original purpose as a state-of-the-art games engine, today it gives creators across industries the freedom and control to deliver cutting-edge content, interactive experiences, and immersive virtual worlds.</p>
+<h2 id="rtx-memory-utility">RTX Memory Utility</h2>
+<p>RTXMU combines both compaction and suballocation techniques to optimize and reduce memory consumption of acceleration structures for any DXR or Vulkan Ray Tracing application.</p>
+<h2 id="developer-tools-2">Developer Tools</h2>
+<p>NVIDIA Developer Tools are a collection of applications, spanning desktop and mobile targets, which enable developers to build, debug, profile, and develop class-leading and cutting-edge software that utilizes the latest visual computing hardware from NVIDIA.</p>
+<h1 id="metropolis">Metropolis</h1>
+<h2 id="metropolis-2">Metropolis</h2>
+<p>An application framework that simplifies the development, deployment and scale of AI-enabled video analytics applications from edge to cloud.</p>
+<h2 id="deepstream-sdk">DeepStream SDK</h2>
+<p>Build and deploy <strong>AI-powered</strong> Intelligent Video Analytics apps and services. DeepStream offers a multi-platform scalable framework with TLS security to deploy on the edge and connect to any cloud.</p>
+<h2 id="transfer-learning-toolkit">Transfer Learning Toolkit</h2>
+<p>Creating an AI/ML model from scratch to solve a business problem is capital intensive and time consuming. <a href="https://blogs.nvidia.com/blog/2019/02/07/what-is-transfer-learning/">Transfer learning</a> is a popular technique that can be used to extract learned features from an existing neural network model to a new one. The NVIDIA Transfer Learning Toolkit (TLT) is the AI toolkit that abstracts away the AI/DL framework complexity and leverages high quality pre-trained models to enable you to build production quality models faster with only a fraction of data required.</p>
+<p>A toolkit for anyone building AI apps and services, TLT helps reduce costs associated with large scale data collection, labeling, and eliminates the burden of training AI/ML models from scratch.</p>
+<p>With TLT, you can use NVIDIA’s <strong>production quality pre-trained models</strong> and deploy as is or apply minimal fine-tuning for various computer vision and conversational AI use-cases. TLT is a core component of NVIDIA's <a href="https://developer.nvidia.com/TAO">Train, Adapt and Optimize (TAO) platform</a>, a UI-based, guided workflow for creating AI</p>
+<h1 id="other-platforms">Other Platforms</h1>
+<h2 id="aerial">Aerial</h2>
+<p><strong>Build and Deploy GPU-Accelerated 5G Virtual Radio Access Networks (vRAN)</strong></p>
+<p>NVIDIA Aerial is an Application framework for building high performance, software-defined, cloud-native 5G applications to address increasing consumer demand. Optimize your results with parallel processing on GPU for baseband signals and data flow.</p>
+<h2 id="arm">Arm</h2>
+<p>NVIDIA’s accelerated computing platform is used to help solve the world’s most challenging computational problems. Today, NVIDIA GPUs not only power some of the world’s largest supercomputers and cloud data centers; they also power edge devices across industries. NVIDIA is expanding support for longtime partner Arm to open new opportunities for developers across an already vibrant ecosystem.</p>
+<h2 id="cloudxr">CloudXR</h2>
+<p>CloudXR is NVIDIA's solution for streaming virtual reality (VR), augmented reality (AR), and mixed reality (MR) content from any OpenVR XR application on a remote server—cloud, data center, or edge. The CloudXR streaming solution includes NVIDIA RTX™ hardware, NVIDIA RTX Virtual Workstation (vWS) drivers, and the CloudXR software development kit (SDK).</p>
+<h2 id="dgx">DGX</h2>
+<p><a href="https://images.nvidia.com/aem-dam/Solutions/Data-Center/dgx-systems/dgx-systems-solution-brief.pdf">NVIDIA DGX™ systems</a> deliver the world’s leading solutions for enterprise AI infrastructure at scale.</p>
+<h2 id="doca-3">DOCA</h2>
+<p>Data Center Infrastructure-on-a-Chip Architecture</p>
+<p>The NVIDIA® DOCA™ SDK (software development kit) enables developers to rapidly create applications and services on top of NVIDIA BlueField® data processing units (DPUs), leveraging industry-standard APIs.</p>
+<p>With DOCA, program the data center infrastructure of tomorrow by creating high-performance, software-defined, cloud-native, DPU-accelerated services to address the increasing performance and security demands of modern data centers.</p>
+<h2 id="riva">Riva</h2>
+<p>NVIDIA Riva is a GPU-accelerated SDK for building multimodal conversational AI applications that deliver real-time performance on GPUs.</p>
+<h2 id="maxine">Maxine</h2>
+<p>NVIDIA Maxine™ is a GPU-accelerated SDK with state-of-the-art AI features for developers to build virtual collaboration and content creation applications such as video conferencing and live streaming.</p>
+<p>Maxine’s AI SDKs—Video Effects, Audio Effects, and Augmented Reality (AR)—are highly optimized and include modular features that can be chained into end-to-end pipelines to deliver the highest performance possible on GPUs, both on PCs and in data centers. Maxine can also be used with <a href="https://developer.nvidia.com/riva">NVIDIA Riva</a>, an SDK for building conversational AI applications, to offer world-class language-based capabilities such as transcription and translation.</p>
+<p>Developers can add Maxine AI effects into their existing applications or develop new pipelines from scratch using <a href="https://developer.nvidia.com/deepstream-sdk">NVIDIA DeepStream</a>, an SDK for building intelligent video analytics, and NVIDIA <a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Video Codec</a>, an SDK for accelerated encode, decode, and transcode.</p>
+<h2 id="merlin">Merlin</h2>
+<p>NVIDIA Merlin™ is an open-source framework for building large-scale deep learning recommender systems.</p>
+<h2 id="omniverse">Omniverse</h2>
+<p>NVIDIA Omniverse™ is a powerful multi-GPU real-time simulation and collaboration platform for 3D production pipelines based on <a href="https://developer.nvidia.com/usd">Pixar's Universal Scene Description</a> and NVIDIA RTX™technology.</p>
+<h2 id="rivermax">Rivermax</h2>
+<p>Optimized networking SDK for Media and Data streaming applications.</p>
+<p>NVIDIA® Rivermax® offers a unique IP-based solution for any media and data streaming use case. Rivermax together with NVIDIA GPU accelerated computing technologies unlocks innovation for a wide range of applications in <a href="https://www.nvidia.com/en-us/industries/media-and-entertainment/">Media and Entertainment (M&amp;E)</a>, Broadcast, Healthcare, Smart Cities and more.</p>
+<p>Rivermax leverages NVIDIA ConnectX® and BlueField DPU hardware streaming acceleration technology that enables <strong>direct data transfers to and from the GPU</strong>, delivering best-in-class throughput and latency with minimal CPU utilization for streaming workloads.</p>
+<p>Rivermax is the only <strong>fully-virtualized streaming solution</strong> that complies with the stringent timing and traffic flow requirement of the SMPTE ST 2110-21 specification. Rivermax enables the future of cloud-based software defined broadcast.</p>
+<h2 id="tao">TAO</h2>
+<p>NVIDIA Train, Adapt, and Optimize (TAO) is an AI-model-adaptation platform that simplifies and accelerates the creation of enterprise AI applications and services. By fine-tuning pretrained models with custom data through a UI-based, guided workflow, enterprises can produce highly accurate computer vision, speech, and language understanding models in hours rather than months, eliminating the need for large training runs and deep AI expertise.</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mingting.github.io/tag/eBspb8TIC/" class="tag">
+                    工作
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mingting.github.io/post/an-jia-ri-zhi-nian-nian-bu-wang-bi-you-hui-xiang/">
+                  <h3 class="post-title">
+                    安家日志，念念不忘必有回响
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '08837cbd0ad876f7035f',
+        clientSecret: 'f93cc6775384f2bbe34f21717775a82f465ddb7c',
+        repo: 'mingting.github.io',
+        owner: 'mingting',
+        admin: ['mingting'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
